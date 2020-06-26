@@ -20,13 +20,13 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(css)$/,
-        use: ["raw-loader", "style-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "raw-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", "css"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
 };
